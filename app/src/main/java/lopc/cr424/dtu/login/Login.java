@@ -26,6 +26,7 @@ public class Login extends Activity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.newlogin);
+        Anhxa();
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
