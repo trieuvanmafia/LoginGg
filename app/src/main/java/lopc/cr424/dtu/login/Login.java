@@ -32,7 +32,7 @@ public class Login extends Activity{
     private FirebaseAuth mAuth;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.newlogin);
         Anhxa();
@@ -43,6 +43,7 @@ public class Login extends Activity{
                 startActivity(intent);
             }
         });
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,25 +66,22 @@ public class Login extends Activity{
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {;
-                        Intent intent = new Intent(Login.this,NewC.class);
-                            FirebaseUser user = mAuth.getCurrentUser();
+                        if (task.isSuccessful()) {
                             Toast.makeText(Login.this, "Succesful",Toast.LENGTH_SHORT).show();
-                            startActivity(intent);
+                            FirebaseUser user = mAuth.getCurrentUser();
+
                         } else {
 
                             Toast.makeText(Login.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
 
                         }
-
-                        // ...
                     }
                 });
     }
     private void Anhxa(){
         btnLogin    = (Button)   findViewById(R.id.buttonLogin);
-        Nuser        = (EditText) findViewById(R.id.username);
-        Npassword    = (EditText) findViewById(R.id.password);
+        Nuser       = (EditText) findViewById(R.id.username);
+        Npassword   = (EditText) findViewById(R.id.password);
         SignUp      = (TextView) findViewById(R.id.txtSignUp);
     }
 }
