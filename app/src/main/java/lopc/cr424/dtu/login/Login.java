@@ -31,6 +31,8 @@ public class Login extends Activity{
     TextView SignUp;
     private FirebaseAuth mAuth;
 
+//    mAuth = FirebaseAuth.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,8 +64,7 @@ public class Login extends Activity{
     private void DangNhap(){
         String email    = Nuser.getText().toString();
         String password = Npassword.getText().toString();
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
