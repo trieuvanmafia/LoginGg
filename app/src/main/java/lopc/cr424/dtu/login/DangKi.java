@@ -63,7 +63,7 @@ public class DangKi extends AppCompatActivity {
 
 
     private void Anhxa() {
-        btnDangki   = (Button)   findViewById(R.id.button3);
+        btnDangki   = (Button)   findViewById(R.id.buttonSignUp);
         edtEmail    = (EditText) findViewById(R.id.editText3);
         edtPassword = (EditText) findViewById(R.id.editText4);
     }
