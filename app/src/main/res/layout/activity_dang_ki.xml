@@ -54,6 +54,7 @@
                 android:text="User"/>
 
             <EditText
+                android:hint="Gmail đăng nhập"
                 android:id="@+id/editText3"
                 android:layout_weight="5"
                 android:layout_width="0dp"
@@ -83,6 +84,8 @@
                 android:text="Password"/>
 
             <EditText
+                android:inputType="textPassword"
+                android:hint="Mật khẩu"
                 android:id="@+id/editText4"
                 android:layout_weight="5"
                 android:layout_width="0dp"
@@ -110,6 +113,7 @@
             android:text="Phone Number"/>
 
         <EditText
+            android:hint="Số điện thoại"
             android:id="@+id/editText5"
             android:layout_weight="5"
             android:layout_width="0dp"
@@ -137,6 +141,7 @@
             android:text="Email"/>
 
         <EditText
+            android:hint="Địa chỉ Email"
             android:id="@+id/editText6"
             android:layout_weight="5"
             android:layout_width="0dp"
