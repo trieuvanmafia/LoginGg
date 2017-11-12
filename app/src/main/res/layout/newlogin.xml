@@ -60,6 +60,7 @@
                 android:text="User"/>
 
             <EditText
+                android:hint="Gmail đăng nhập"
                 android:id="@+id/username"
                 android:layout_weight="5"
                 android:layout_width="0dp"
@@ -89,6 +90,8 @@
                 android:text="Password"/>
 
             <EditText
+                android:hint="Mật Khẩu"
+                android:inputType="textPassword"
                 android:id="@+id/password"
                 android:layout_weight="5"
                 android:layout_width="0dp"

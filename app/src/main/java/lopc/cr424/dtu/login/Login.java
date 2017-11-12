@@ -31,12 +31,12 @@ public class Login extends Activity{
     TextView SignUp;
     private FirebaseAuth mAuth;
 
-//    mAuth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.newlogin);
+        mAuth = FirebaseAuth.getInstance();
         Anhxa();
         SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,11 +55,11 @@ public class Login extends Activity{
 
     }
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-//    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+    }
 
     private void DangNhap(){
         String email    = Nuser.getText().toString();
