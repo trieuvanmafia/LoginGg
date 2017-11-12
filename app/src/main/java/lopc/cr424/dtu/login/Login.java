@@ -68,9 +68,11 @@ public class Login extends Activity{
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
                             Toast.makeText(Login.this, "Successful",Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
-
+                            Intent intent = new Intent(Login.this,NewC.class);
+                            startActivity(intent);
                         } else {
 
                             Toast.makeText(Login.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
