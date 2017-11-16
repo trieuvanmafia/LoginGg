@@ -1,5 +1,6 @@
 package lopc.cr424.dtu.login;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -53,6 +54,8 @@ public class DangKi extends AppCompatActivity {
                             Log.d("TAG", "createUserWithEmail:success");
                             Toast.makeText(DangKi.this, "Successful.", Toast.LENGTH_SHORT).show();
                             FirebaseUser user = mAuth.getCurrentUser();
+                            Intent intent =new Intent(DangKi.this,Login.class);
+                            startActivity(intent);
 
                         } else {
                             // If sign in fails, display a message to the user.
